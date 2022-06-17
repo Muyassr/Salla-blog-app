@@ -1,6 +1,9 @@
 import Navbar from "../../components/Navbar";
-import styles from './styles.scss' 
+import styles from "./styles.scss";
 import backgroundImage from "../../assets/diverse-people-working-office1.png";
+import MostReadCard from "./MostReadCard";
+import { IoIosArrowBack } from "react-icons/io";
+
 const Hero = () => {
   const imgUrl = "/src/assets/diverse-people-working-office1.png";
   return (
@@ -20,6 +23,17 @@ const Hero = () => {
             </p>
           </div>
         </div>
+      </section>
+      <section id="mostRead">
+        <div className="flex p-5 px-52 justify-between align-baseline">
+          <h3 className="text-2xl">الأكثر قراءة</h3>
+          <div className="flex items-center">
+            <h4>عرض المزيد</h4>
+            <IoIosArrowBack className="text-emerald-400" />
+          </div>
+        </div>
+        {/* <BlogList blogs={blogs} />  */}
+        <MostReadCard />
       </section>
     </>
   );

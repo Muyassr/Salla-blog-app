@@ -4,8 +4,12 @@ import Hero from './Hero'
 
 const LandingPage = () => {
   return (
-    // <Navbar/>
+    // <Navbar/>/
+    <>
     <Hero/>
+    
+    
+    </>
   )
 };
 
