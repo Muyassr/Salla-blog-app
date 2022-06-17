@@ -4,10 +4,9 @@ import "./App.scss";
 import LandingPage from "./pages/HomePage/LandingPage";
 
 function App() {
-
   return (
     <div className="App">
-      <LandingPage/>
+      <LandingPage />
     </div>
   );
 }
