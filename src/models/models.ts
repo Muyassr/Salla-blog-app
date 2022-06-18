@@ -4,7 +4,7 @@ export interface Blog {
     category: string;
     content: string;
     author: string;
-    imgUrl: string;
+    img: string;
     published: Date;
   }
   
