@@ -5,6 +5,8 @@ import BlogList from "./BlogList";
 import { IoIosArrowBack } from "react-icons/io";
 import axios from "axios";
 import "./styles.scss";
+import NewsLetter from "./NewsLetter";
+import Footer from "./Footer";
 
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
@@ -32,10 +34,12 @@ const LandingPage: React.FC = () => {
             </div>
           </a>
         </div>
-        <div className="conatiner flex justify-between space-x-7 space-x-reverse">
+        <div className="conatiner grid grid-cols-3 gap-4">
           <BlogList blogs={blogs} />
         </div>
       </section>
+      <NewsLetter />
+      <Footer/>
     </>
   );
 };
