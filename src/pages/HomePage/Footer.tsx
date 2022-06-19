@@ -45,7 +45,7 @@ const Footer: React.FC<props> = () => {
                 </a>
               </div>
               <div className="border-r-2 "></div>
-              <button className="bg-[#FF9F4B] hover:bg-[#d37b2d] text-white font-bold py-2 px-4 rounded transition-all">
+              <button className="bg-[#FF9F4B] hover:bg-[#f0913e] text-white font-bold py-2 px-4 rounded transition-all">
                 كن كاتباً معنا
               </button>
             </div>

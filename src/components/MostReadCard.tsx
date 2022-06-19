@@ -1,10 +1,11 @@
-import { Blog } from "../../models/models";
+import { Blog } from "../models/models";
 
 interface props {
   blog: Blog;
+  index: number;
 }
 
-const MostReadCard = ({ blog }: props) => {
+const MostReadCard = ({ index, blog }: props) => {
   return (
     <>
       <a href="#" className="">
