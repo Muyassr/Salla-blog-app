@@ -1,9 +1,9 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Blog } from '../models/models';
 
 interface props {
-    baseURL: String;
+    baseURL: string;
 }
 
 const useFetch = ({baseURL}: props) => {
