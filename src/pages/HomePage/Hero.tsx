@@ -3,6 +3,8 @@ import styles from "./styles.scss";
 import backgroundImage from "../../assets/diverse-people-working-office1.png";
 import { useState, useEffect } from "react";
 
+interface props {}
+
 const Hero: React.FC<props> = () => {
   const imgUrl = "/src/assets/diverse-people-working-office1.png";
   const [blog, setBlog] = useState([]);
