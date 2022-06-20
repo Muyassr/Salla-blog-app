@@ -5,7 +5,7 @@ import IdeasBlogCard from "../../components/IdeasBlogCard";
 
 interface props {
   blogs: Array<Blog>;
-  blogType: String;
+  blogType: string;
 }
 
 const BlogList = ({ blogs, blogType }: props) => {
