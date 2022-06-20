@@ -9,6 +9,7 @@ import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
 import IdeasBlogs from "./IdeasBlogs";
 import Navbar from "../../components/Navbar";
+import AdBanner from "./AdBanner";
 
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
@@ -33,7 +34,7 @@ const LandingPage: React.FC = () => {
     <>
       <Navbar />
       <div className="flex flex-col space-y-16">
-        
+
         {/* start Hero Section */}
         <Hero />
         {/* end Hero Section */}
@@ -65,6 +66,11 @@ const LandingPage: React.FC = () => {
 
         {/* sperator */}
         <div className=" w-[73.125rem] border-t-2 border-neutral-200 mx-auto"></div>
+
+        {/* start Ad banner section */}
+        <section id="adBanner" className="px-52">
+          <AdBanner/>
+        </section>
 
         {/* start Newsletter section */}
         <NewsLetter />

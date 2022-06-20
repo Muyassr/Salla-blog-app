@@ -17,7 +17,7 @@ const IdeasBlogCard = ({ index, blog }: props) => {
       >
         <div className={`flex relative ${isFirst ? "flex-col" : "h-full"}`}>
           <div
-            className={`ideasBlog-image ${blog.img} ${
+            className={`ideasBlog-image rounded ${blog.img} ${
               isFirst ? "w-full h-[22rem]" : "w-48 h-auto"
             }`}
           ></div>

@@ -46,3 +46,15 @@
     }
   }
 }
+
+#adBanner {
+  .adBanner-image {
+    background-size: cover;
+    background-position: center;
+    background-color: #0a0a0a;
+    background-image: url(src/assets/img-ad-banner.jpg);
+  }
+  .content {
+    
+  }
+}
