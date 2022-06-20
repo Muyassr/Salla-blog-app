@@ -1,56 +1,48 @@
 .most-read-card {
-    // min-width
-    .bg-mostRead-image {
-     position: absolute;
-     top: 0;
-     left: 0;
-     height: 100%;
-     width: 100%;
-     background-size: cover;
-     background-position: center;
-     background-color: #0a0a0a;
-     background-image: url(src/assets/Rectangle-326.jpg);
-     opacity: 1;
-     z-index: -1;
-     border-radius: 3px 3px 0 0;
-     &.img-mostRead-1{
-         background-image: url(src/assets/img-mostRead-1.jpg);
-     }
-     &.img-mostRead-2{
-         background-image: url(src/assets/img-mostRead-2.jpg);
-     }
-     &.img-mostRead-3{
-         background-image: url(src/assets/img-mostRead-3.jpg);
-     }
+  .bg-mostRead-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #0a0a0a;
+    background-image: url(src/assets/Rectangle-326.jpg);
+    opacity: 1;
+    z-index: -1;
+    border-radius: 3px 3px 0 0;
+    &.img-mostRead-1 {
+      background-image: url(src/assets/img-mostRead-1.jpg);
     }
+    &.img-mostRead-2 {
+      background-image: url(src/assets/img-mostRead-2.jpg);
+    }
+    &.img-mostRead-3 {
+      background-image: url(src/assets/img-mostRead-3.jpg);
+    }
+  }
 }
 
 .ideas-blog-card {
-    // min-width
-    .ideasBlog-image {
-    //  position: absolute;
-    //  top: 0;
-    //  left: 0;
-    //  height: 100%;
-    //  width: 100%;
-     background-size: cover;
-     background-position: center;
-     background-color: #0a0a0a;
-     background-image: url(src/assets/Rectangle-326.jpg);
-     opacity: 1;
-    //  z-index: -1;
-    //  border-radius: 3px 3px 0 0;
-     &.img-mostRead-1{
-         background-image: url(src/assets/img-mostRead-1.jpg);
-     }
-     &.img-mostRead-2{
-         background-image: url(src/assets/img-mostRead-2.jpg);
-     }
-     &.img-mostRead-3{
-         background-image: url(src/assets/img-mostRead-3.jpg);
-     }
-     &.img-mostRead-4{
-         background-image: url(src/assets/img-mostRead-3.jpg);
-     }
+  .ideasBlog-image {
+    background-size: cover;
+    background-position: center;
+    background-color: #0a0a0a;
+    background-image: url(src/assets/Rectangle-326.jpg);
+    opacity: 1;
+
+    &.img-ideas-1 {
+      background-image: url(src/assets/img-ideas-1.png);
     }
+    &.img-ideas-2 {
+      background-image: url(src/assets/img-ideas-2.png);
+    }
+    &.img-ideas-3 {
+      background-image: url(src/assets/img-ideas-3.png);
+    }
+    &.img-ideas-4 {
+      background-image: url(src/assets/img-ideas-4.png);
+    }
+  }
 }

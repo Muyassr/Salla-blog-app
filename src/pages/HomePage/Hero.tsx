@@ -1,5 +1,3 @@
-import Navbar from "../../components/Navbar";
-import styles from "./styles.scss";
 import backgroundImage from "../../assets/diverse-people-working-office1.png";
 import { useState, useEffect } from "react";
 
@@ -10,7 +8,7 @@ const Hero: React.FC<props> = () => {
   const [blog, setBlog] = useState([]);
   return (
     <>
-      <Navbar />
+      
       <section
         className={`h-[32.5rem] p-5 px-52 flex bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay bg-[url('${imgUrl}')]`}
         style={{ backgroundImage: `url(${backgroundImage})` }}
