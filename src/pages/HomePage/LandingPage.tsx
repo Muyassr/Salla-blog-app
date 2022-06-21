@@ -11,10 +11,6 @@ import IdeasBlogs from "./IdeasBlogs";
 import Navbar from "../../components/Navbar";
 import AdBanner from "./AdBanner";
 import IdeasBlogCard2 from "../../components/ideasBlogCard2";
-import Card1 from "../../components/card1";
-import Card2 from "../../components/card2";
-import Card3 from "../../components/card3";
-
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
 const LandingPage: React.FC = () => {
@@ -36,7 +32,7 @@ const LandingPage: React.FC = () => {
   return (
     // <Navbar/>/
     <>
-      <Navbar />
+      
       <div className="flex flex-col space-y-16">
         {/* start Hero Section */}
         <Hero />

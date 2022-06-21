@@ -2,9 +2,9 @@ import React from "react";
 import { Blog } from "../../models/models";
 import MostReadCard from "../../components/MostReadCard";
 import IdeasBlogCard from "../../components/IdeasBlogCard";
-import Card2 from "../../components/card2";
-import Card3 from "../../components/card3";
-import Card1 from "../../components/card1";
+import Card2 from "../../components/Card2";
+import Card3 from "../../components/Card3";
+import Card1 from "../../components/Card1";
 
 interface props {
   blogs: Array<Blog>;
