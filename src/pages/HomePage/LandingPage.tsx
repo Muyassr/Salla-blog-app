@@ -7,25 +7,23 @@ import axios from "axios";
 import "./styles.scss";
 import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
-import IdeasBlogs from "./IdeasBlogs";
-import Navbar from "../../components/Navbar";
 import AdBanner from "./AdBanner";
-import IdeasBlogCard2 from "../../components/ideasBlogCard2";
+
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
 const LandingPage: React.FC = () => {
   const [mostReadBlogs, setMostReadBlogs] = useState<Array<Blog>>([]);
   const [ideasBlogs, setideasBlogs] = useState<Array<Blog>>([]);
-  const blogTypes = { MostReadCard: 1, IdeasBlogCard: 2, ideasBlogs2: 3, ideasBlogs3: 4 };
+  const blogTypes = { MostReadCard: 1, IdeasBlogCard: 2, ideasBlogs2: 3, ideasBlogs3: 4, reportsList: 5 };
   useEffect(() => {
     //get mostReadblogs
     axios.get(`${baseURL}mostReadBlogs`).then((response) => {
-      setMostReadBlogs(response.data);
+      setMostReadBlogs(response.data.slice(0, 4));
     });
 
     //get blogs
     axios.get(`${baseURL}blogs`).then((response) => {
-      setideasBlogs(response.data);
+      setideasBlogs(response.data.slice(0, 4));
     });
   }, []);
 

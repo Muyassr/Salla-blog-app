@@ -43,6 +43,11 @@ const BlogList = ({ blogs, blogType }: props) => {
             <Card3 key={blog.id} blog={blog} blogType={blogType} />
           );
         })}
+
+      {blogType === 5 &&
+        blogs?.map((blog, index) => {
+          return <Card2 key={blog.id} blog={blog} blogType={blogType} />;
+        })}
     </>
   );
 };
