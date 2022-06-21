@@ -13,13 +13,14 @@ import AdBanner from "./AdBanner";
 import IdeasBlogCard2 from "../../components/ideasBlogCard2";
 import Card1 from "../../components/card1";
 import Card2 from "../../components/card2";
+import Card3 from "../../components/card3";
 
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
 const LandingPage: React.FC = () => {
   const [mostReadBlogs, setMostReadBlogs] = useState<Array<Blog>>([]);
   const [ideasBlogs, setideasBlogs] = useState<Array<Blog>>([]);
-
+  const blogTypes = { MostReadCard: 1, IdeasBlogCard: 2, ideasBlogs2: 3 };
   useEffect(() => {
     //get mostReadblogs
     axios.get(`${baseURL}mostReadBlogs`).then((response) => {
@@ -41,10 +42,6 @@ const LandingPage: React.FC = () => {
         <Hero />
         {/* end Hero Section */}
 
-        <section id="ideasBlogs2" className="px-52">
-          <IdeasBlogCard2 />
-        </section>
-
         {/* start Most read section */}
         <section id="mostRead" className="px-52">
           <div className="flex justify-between align-baseline mb-6">
@@ -57,18 +54,18 @@ const LandingPage: React.FC = () => {
             </a>
           </div>
           <div className="conatiner grid grid-cols-3 gap-8">
-            <BlogList blogs={mostReadBlogs} blogType={"MostReadCard"} />
+            <BlogList blogs={mostReadBlogs} blogType={1} />
           </div>
         </section>
         {/* end Most read section */}
 
-        {/* start blogs grid 1 section */}
+        {/* start ideas blogs grid 1 section */}
         <section id="ideasBlogs" className="px-52">
           <div className="grid grid-rows-3 grid-flow-col gap-6">
-            <BlogList blogs={ideasBlogs} blogType={"IdeasBlogCard"} />
+            <BlogList blogs={ideasBlogs} blogType={2} />
           </div>
         </section>
-        {/* end blogs grid 1 section */}
+        {/* end ideas blogs grid 1 section */}
 
         {/* sperator */}
         <div className=" w-[73.125rem] border-t-2 border-neutral-200 mx-auto"></div>
@@ -77,55 +74,15 @@ const LandingPage: React.FC = () => {
         <section id="adBanner" className="px-52">
           <AdBanner />
         </section>
+        {/* end Ad banner section */}
 
-        {/* start Nblogs grid 2 section */}
-        <section id="mostRead" className="px-52">
+        {/* start ideas blogs 2 section */}
+        <section id="ideasBlogs2" className="px-52">
           <div className="conatiner grid grid-cols-4 gap-8">
-            <BlogList
-              blogs={[
-                {
-                  title: "title 1",
-                  content: "content 1",
-                  category: "category 1",
-                  img: "img-mostRead-1",
-                  author: "author 1",
-                  published: 1655544244,
-                  id: "1",
-                },
-                {
-                  title: "title 2",
-                  content: "content 2",
-                  category: "category 2",
-                  img: "img-mostRead-2",
-                  author: "author 2",
-                  published: 1655544184,
-                  id: "2",
-                },
-                {
-                  title: "title 3",
-                  content: "content 3",
-                  category: "category 3",
-                  img: "img-mostRead-3",
-                  author: "author 3",
-                  published: 1655544124,
-                  id: "3",
-                },
-                {
-                  title: "title 3",
-                  content: "content 3",
-                  category: "category 3",
-                  img: "img-mostRead-3",
-                  author: "author 3",
-                  published: 1655544124,
-                  id: "3",
-                },
-              ]}
-              blogType={"MostReadCard"}
-            />
+            <BlogList blogs={ideasBlogs} blogType={3} />
           </div>
         </section>
-
-        {/* end blogs grid 2 section */}
+        {/* end ideas blogs 2 section */}
 
         {/* start Newsletter section */}
         <NewsLetter />

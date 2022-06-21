@@ -16,7 +16,7 @@ const AdBanner: React.FC<props> = () => {
   });
   return (
     <>
-      <div className="h-[22.375rem] text-right rounded adBanner-image text-white">
+      <div className="h-[22.375rem] text-right rounded adBanner-image text-white relative">
         <div className="content w-2/4 pr-28 pt-20">
           <h5 className="mb-2 text-sm text--neutral-800 border-r-2 border-emerald-400 pr-2">
             أفكار بزنس
