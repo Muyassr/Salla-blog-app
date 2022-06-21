@@ -7,12 +7,17 @@ interface props {
 }
 
 const Card2 = ({ blogType, blog }: props) => {
+  const [isBigImg, setisBigImg] = useState(blogType == 2 || blogType == 4);
   return (
     <>
-      <div className={`ideas-blog-card ${blogType==2?'row-span-3 col-span-8':''}`}>
+      <div
+        className={`ideas-blog-card ${isBigImg ? "row-span-3 col-span-8" : ""}`}
+      >
         <div className="flex relative flex-col">
           <div
-            className={`ideasBlog-image rounded img-ideas-1 w-full ${blogType==2?'h-[22rem]':'h-56'}`}
+            className={`ideasBlog-image rounded img-ideas-1 w-full ${
+              isBigImg ? "h-[22rem]" : "h-56"
+            }`}
           ></div>
           <div className="content text-right w-full h-auto pt-5 bg-white p-5">
             <h5 className="mb-2 text-sm text--neutral-800 border-r-2 border-emerald-400 pr-2">

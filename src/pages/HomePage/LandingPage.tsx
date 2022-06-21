@@ -20,7 +20,7 @@ const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 const LandingPage: React.FC = () => {
   const [mostReadBlogs, setMostReadBlogs] = useState<Array<Blog>>([]);
   const [ideasBlogs, setideasBlogs] = useState<Array<Blog>>([]);
-  const blogTypes = { MostReadCard: 1, IdeasBlogCard: 2, ideasBlogs2: 3 };
+  const blogTypes = { MostReadCard: 1, IdeasBlogCard: 2, ideasBlogs2: 3, ideasBlogs3: 4 };
   useEffect(() => {
     //get mostReadblogs
     axios.get(`${baseURL}mostReadBlogs`).then((response) => {
@@ -83,6 +83,14 @@ const LandingPage: React.FC = () => {
           </div>
         </section>
         {/* end ideas blogs 2 section */}
+
+        {/* start ideas blogs grid 3 section */}
+        <section id="ideasBlogs3" className="px-52">
+          <div className="grid grid-rows-3 grid-flow-col gap-6">
+            <BlogList blogs={ideasBlogs} blogType={4} />
+          </div>
+        </section>
+        {/* end ideas blogs grid 3 section */}
 
         {/* start Newsletter section */}
         <NewsLetter />
