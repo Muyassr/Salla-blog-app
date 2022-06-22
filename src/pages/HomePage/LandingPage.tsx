@@ -14,7 +14,13 @@ const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 const LandingPage: React.FC = () => {
   const [mostReadBlogs, setMostReadBlogs] = useState<Array<Blog>>([]);
   const [ideasBlogs, setideasBlogs] = useState<Array<Blog>>([]);
-  const blogTypes = { MostReadCard: 1, IdeasBlogCard: 2, ideasBlogs2: 3, ideasBlogs3: 4, reportsList: 5 };
+  const blogTypes = {
+    MostReadCard: 1,
+    IdeasBlogCard: 2,
+    ideasBlogs2: 3,
+    ideasBlogs3: 4,
+    reportsList: 5,
+  };
   useEffect(() => {
     //get mostReadblogs
     axios.get(`${baseURL}mostReadBlogs`).then((response) => {
@@ -30,7 +36,6 @@ const LandingPage: React.FC = () => {
   return (
     // <Navbar/>/
     <>
-      
       <div className="flex flex-col space-y-16">
         {/* start Hero Section */}
         <Hero />
@@ -85,12 +90,7 @@ const LandingPage: React.FC = () => {
           </div>
         </section>
         {/* end ideas blogs grid 3 section */}
-
-        {/* start Newsletter section */}
-        <NewsLetter />
-        {/* end Newsletter section */}
       </div>
-      <Footer />
     </>
   );
 };

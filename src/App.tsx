@@ -2,11 +2,13 @@ import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
 import LandingPage from "./pages/HomePage/LandingPage";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Reports from "./pages/Reports/Reports";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
+import NewsLetter from "./pages/HomePage/NewsLetter";
+import Footer from "./pages/HomePage/Footer";
 // import { Route, Router } from "react-router-dom";
 // import { Switch } from "@headlessui/react";
 
@@ -17,13 +19,15 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        {/* <div className="content"> */}
         <Routes>
-          <Route path='/' element={<LandingPage/>} />
-          <Route path='/reports' element={<Reports/>} />
-          <Route path='*' element={<NotFound/>} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        {/* </div> */}
+        {/* start Newsletter section */}
+        <NewsLetter />
+        {/* end Newsletter section */}
+        <Footer />
       </div>
     </Router>
   );
