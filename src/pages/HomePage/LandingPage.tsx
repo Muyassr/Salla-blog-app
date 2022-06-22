@@ -36,7 +36,7 @@ const LandingPage: React.FC = () => {
   return (
     // <Navbar/>/
     <>
-      <div className="flex flex-col space-y-16">
+      <div className="flex flex-col space-y-16 mb-[4.375rem]">
         {/* start Hero Section */}
         <Hero />
         {/* end Hero Section */}

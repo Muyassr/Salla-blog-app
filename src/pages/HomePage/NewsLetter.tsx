@@ -8,8 +8,10 @@ const NewsLetter: React.FC<NewsLetterProps> = () => {
       <div className="form-wrapper px-52 py-10 flex justify-center bg-[#F7F7F7]">
         <form className="w-[35rem]">
           <div className="mb-6 ">
-           <h3 className="text-xl mb-2">اشترك في النشرة البريدية</h3>
-           <h3 className="text-base text-slate-500">وكن اول من يعلم كل جديد في عالم التجارة الالكترونية</h3>
+            <h3 className="text-xl mb-2">اشترك في النشرة البريدية</h3>
+            <h3 className="text-base text-slate-500">
+              وكن اول من يعلم كل جديد في عالم التجارة الالكترونية
+            </h3>
           </div>
           <div className="input-wrapper relative">
             <HiOutlineMail className="absolute right-2 top-3 text-[#FF9F4B]" />

@@ -5,6 +5,7 @@ import IdeasBlogCard from "../../components/IdeasBlogCard";
 import Card2 from "../../components/Card2";
 import Card3 from "../../components/Card3";
 import Card1 from "../../components/Card1";
+import { Link } from "react-router-dom";
 
 interface props {
   blogs: Array<Blog>;
@@ -12,7 +13,7 @@ interface props {
 }
 
 const BlogList = ({ blogs, blogType }: props) => {
-  console.log(blogType, blogs);
+  // console.log(blogType, blogs);
 
   return (
     <>
@@ -46,7 +47,15 @@ const BlogList = ({ blogs, blogType }: props) => {
 
       {blogType === 5 &&
         blogs?.map((blog, index) => {
-          return <Card2 key={blog.id} blog={blog} blogType={blogType} />;
+          return (
+            <Link
+              state={{ blogId: `${blog.id}` }}
+              to={`${blog.id}`}
+              className="btn btn-ghost normal-case text-xl font-bold"
+            >
+              <Card2 key={blog.id} blog={blog} blogType={blogType} />
+            </Link>
+          );
         })}
     </>
   );

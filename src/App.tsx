@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import NewsLetter from "./pages/HomePage/NewsLetter";
 import Footer from "./pages/HomePage/Footer";
+import ReportDetails from "./pages/Reports/ReportDetails";
 // import { Route, Router } from "react-router-dom";
 // import { Switch } from "@headlessui/react";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="*" element={<NotFound />} />
+          <Route  path="/reports/:id" element={<ReportDetails/>} />
         </Routes>
         {/* start Newsletter section */}
         <NewsLetter />
