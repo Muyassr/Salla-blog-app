@@ -25,23 +25,23 @@ const LandingPage: React.FC = () => {
     reportsList: 5,
   };
   useEffect(() => {
-    //get mostReadblogs
-    // axios.get(`${baseURL}mostReadBlogs`).then((response) => {
-    // setMostReadBlogs(response.data.slice(0, 3));
-    // });
-
     //get blogs
-    axios.get(`${baseURL}blogs`).then((response) => {
-      if (response.data.length > 0) {
-        setIsEmpty(false);
-        setIsPending(false);
-        setMostReadBlogs(response.data.slice(0, 3));
-        setideasBlogs(response.data.slice(0, 4));
-      } else {
-        setIsPending(false);
-        setIsEmpty(true);
-      }
-    });
+    axios
+      .get(`${baseURL}blogs`)
+      .then((response) => {
+        if (response.data.length > 0) {
+          setIsEmpty(false);
+          setIsPending(false);
+          setMostReadBlogs(response.data.slice(0, 3));
+          setideasBlogs(response.data.slice(0, 4));
+        } else {
+          setIsPending(false);
+          setIsEmpty(true);
+        }
+      })
+      .catch((response) => {
+        console.log(response);
+      });
   }, []);
 
   return (

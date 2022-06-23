@@ -7,6 +7,7 @@ import { FiTwitter } from "react-icons/fi";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
 import { useFormik } from "formik";
+import NotFound from "../NotFound";
 
 interface probs {
   blogId: number;
@@ -30,14 +31,21 @@ const ReportDetails = ({ blogId }: probs) => {
   const [blog, setBlog] = useState<Blog>();
   const [fontSize, setfontSize] = useState<string>("text-base");
   const [isPending, setIsPending] = useState(true);
+  const [isBlogValid, setIsBlogValid] = useState(true);
   const [isEmailVaid, setIsEmailVaid] = useState(false);
 
   useEffect(() => {
     //get blog details
-    axios.get(`${baseURL}blogs/${id}`).then((response) => {
-      setIsPending(false);
-      setBlog(response.data);
-    });
+    axios
+      .get(`${baseURL}blogs/${id}`)
+      .then((response) => {
+        setIsPending(false);
+        setBlog(response.data);
+      })
+      .catch((response) => {
+        setIsPending(false);
+        setIsBlogValid(false);
+      });
   }, []);
 
   const formik = useFormik({
@@ -53,7 +61,8 @@ const ReportDetails = ({ blogId }: probs) => {
   return (
     <>
       {isPending && <div>Loading...</div>}
-      {!isPending && (
+      {!isBlogValid && <NotFound />}
+      {!isPending && isBlogValid && (
         <section id="report-details" className="">
           <div className="report-header-bg text-right text-white py-14 px-10 2xl:px-52 space-y-6">
             <h5 className="mb-2 text-sm text--neutral-800 border-r-2 border-emerald-400 pr-2">

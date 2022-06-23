@@ -11,16 +11,21 @@ const Reports: React.FC = () => {
   const [isEmpty, setIsEmpty] = useState(false);
   useEffect(() => {
     //get blogs
-    axios.get(`${baseURL}blogs`).then((response) => {
-      if (response.data.length > 0) {
-        setIsEmpty(false);
-        setIsPending(false);
-        setideasBlogs(response.data);
-      } else {
-        setIsPending(false);
-        setIsEmpty(true);
-      }
-    });
+    axios
+      .get(`${baseURL}blogs`)
+      .then((response) => {
+        if (response.data.length > 0) {
+          setIsEmpty(false);
+          setIsPending(false);
+          setideasBlogs(response.data);
+        } else {
+          setIsPending(false);
+          setIsEmpty(true);
+        }
+      })
+      .catch((response) => {
+        console.log(response);
+      });
   }, []);
   return (
     <>
@@ -29,7 +34,11 @@ const Reports: React.FC = () => {
           التقارير والدراسات
         </h2>
 
-        {isPending && <div>Loading...</div>}
+        {isPending && (
+          <div className="">
+            <h1>Loading...</h1>
+          </div>
+        )}
         {isEmpty && <div>list is empty...</div>}
         {!isEmpty && !isPending && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
