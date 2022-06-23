@@ -6,6 +6,7 @@ import { FiFacebook } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
+import { BiTimeFive } from "react-icons/bi";
 
 interface probs {
   blogId: number;
@@ -64,7 +65,7 @@ const ReportDetails = ({ blogId }: probs) => {
               </button>
             </div>
           </div>
-          <p className={``}>
+          <p>
             إن من أهم مميزات التسويق الإلكتروني تعدد طرقه وأدواته وهو ما يجعله
             يناسب أنواع الأعمال والأعمار المختلفة، إذ يفضل تطبيق جميع الطرق
             لأنها في النهاية تصب في قناة واحدة وهي ما تسوق له الأمر الذي سيوفر
@@ -83,7 +84,7 @@ const ReportDetails = ({ blogId }: probs) => {
             ما الذي سستبعه على الانترنت ؟
           </h5>
           <div className="rounded h-[26.75rem] bg-slate-400 report-article-img-1"></div>
-          <p className={``}>
+          <p>
             إن من أهم مميزات التسويق الإلكتروني تعدد طرقه وأدواته وهو ما يجعله
             يناسب أنواع الأعمال والأعمار المختلفة، إذ يفضل تطبيق جميع الطرق
             لأنها في النهاية تصب في قناة واحدة وهي ما تسوق له الأمر الذي سيوفر
@@ -98,7 +99,7 @@ const ReportDetails = ({ blogId }: probs) => {
             يفضل تطبيق جميع الطرق لأنها في النهاية تصب في قناة واحدة وهي ما تسوق
             له الأمر الذي سيوفر انتشارا أو نجاحا أكبر مع الوقت إذ أنه من.
           </p>
-          <div className="flex justify-between border-t-2 border-neutral-200 py-5  border-b-2">
+          <div className="flex justify-between border-t border-neutral-200 py-5  border-b">
             <div className="tags flex space-x-2 space-x-reverse text-gray-400">
               <div className="rounded-full bg-slate-100 px-3 py-1 h-fit">
                 # تسويق
@@ -137,6 +138,84 @@ const ReportDetails = ({ blogId }: probs) => {
               </a>
             </div>
           </div>
+          {/* comments section */}
+          <section className="space-y-5">
+            <h5 className="mb-2 text-black font-bold border-r-2 border-emerald-400 pr-2">
+              التعليقات (3)
+            </h5>
+            <div className="comment border-b pb-5">
+              <div className="flex justify-between mb-2">
+                <h5 className="text-black">أبو جود</h5>
+                <div className="flex space-x-1 items-center space-x-reverse">
+                  <BiTimeFive />
+                  <h5>منذ يوم</h5>
+                </div>
+              </div>
+              <p className="text-neutral-700">
+                إن من أهم مميزات التسويق الإلكتروني تعدد طرقه وأدواته وهو ما
+                روني تعدد طرقه وأدواته وهو ما يجعله يناسب أنواع الأعمال والأعمار
+                المختلفة، إذ يفضل تطبيق جميع الطرق لأنها في النهاية تصب في قناة
+                واحدة وهي ما تسوق له الأمر الذي سيوفر انتشارا أو نجاحا أكبر مع
+                الوقت إذ أنه من.
+              </p>
+            </div>
+            <div className="comment border-b pb-5">
+              <div className="flex justify-between mb-2">
+                <h5 className="text-black">أبو جود</h5>
+                <div className="flex space-x-1 items-center space-x-reverse">
+                  <BiTimeFive />
+                  <h5>منذ يوم</h5>
+                </div>
+              </div>
+              <p className="text-neutral-700">
+                إن من أهم مميزات التسويق الإلكتروني تعدد طرقه وأدواته وهو ما
+                روني تعدد طرقه وأدواته وهو ما يجعله يناسب أنواع الأعمال والأعمار
+                المختلفة، إذ يفضل تطبيق جميع الطرق لأنها في النهاية تصب في قناة
+                واحدة وهي ما تسوق له الأمر الذي سيوفر انتشارا أو نجاحا أكبر مع
+                الوقت إذ أنه من.
+              </p>
+            </div>
+            <h5 className="mb-2 text-black font-bold border-r-2 border-emerald-400 pr-2">
+              كن اول من يعلق
+            </h5>
+            <form onSubmit={() => {}} className="grid grid-cols-2 gap-4">
+              <div className="flex flex-col col-span-2 space-y-2.5">
+                <label>اكتب تعليقك</label>
+                <textarea
+                  className="border rounded h-28 p-3"
+                  required
+                  placeholder="اكتب تعليقك هنا"
+                  // value={body}
+                  // onChange={(e) => setBody(e.target.value)}
+                ></textarea>
+              </div>
+              <div className="flex flex-col space-y-2.5">
+                <label>الاسم</label>
+                <input
+                  className="border rounded p-3"
+                  placeholder="الرجاء كتابة اسمك هنا"
+                  type="text"
+                  required
+                  value={""}
+                  // onChange={(e) => setTitle(e.target.value)}
+                />
+              </div>
+              <div className="flex flex-col space-y-2.5">
+                <label>الايميل</label>
+                <input
+                  className="border rounded p-3"
+                  placeholder="الرجاء كتابة ايميلك هنا"
+                  type="text"
+                  required
+                  value={""}
+                  // onChange={(e) => setTitle(e.target.value)}
+                />
+              </div>
+              <button className="bg-[#45beae] hover:bg-[#4cccbb] text-white w-60 font-bold py-2 px-4 rounded transition-all">
+                أضف تعليقك
+              </button>
+            </form>
+          </section>
         </div>
       </section>
     </>
