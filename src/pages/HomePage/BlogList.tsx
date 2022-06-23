@@ -49,11 +49,11 @@ const BlogList = ({ blogs, blogType }: props) => {
         blogs?.map((blog, index) => {
           return (
             <Link
-              state={{ blogId: `${blog.id}` }}
+              key={blog.id}
               to={`${blog.id}`}
               className="btn btn-ghost normal-case text-xl font-bold"
             >
-              <Card2 key={blog.id} blog={blog} blogType={blogType} />
+              <Card2 blog={blog} blogType={blogType} />
             </Link>
           );
         })}
