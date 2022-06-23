@@ -10,7 +10,7 @@ const NotFound: React.FC<props> = () => {
           <div className="container m-auto">
             <p className="mb-2">الصفحة غير موجودة حالياً.</p>
             <Link to="/">
-              <button className="bg-[#a3ded6] hover:bg-[#a7e1d9] text-[#f8fffe] font-bold py-2 px-4 transition-all rounded">
+              <button className="bg-[#3c3c3c] hover:bg-[#3c3c3c] text-[#f8fffe] font-bold py-2 px-4 transition-all rounded">
                 الرجوع الى الصفحة الرئيسة
               </button>
             </Link>
