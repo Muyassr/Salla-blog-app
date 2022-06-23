@@ -6,33 +6,18 @@ import { FiFacebook } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
-import { useFormik } from "formik";
 import NotFound from "../NotFound";
 
-interface probs {
-  blogId: number;
-}
-
-const validate = (values) => {
-  const errors = {};
-  if (!values.email) {
-    errors.email = "Required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Invalid email address";
-  }
-
-  return errors;
-};
+interface probs {}
 
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
-const ReportDetails = ({ blogId }: probs) => {
+const ReportDetails = ({}: probs) => {
   const { id } = useParams();
   const [blog, setBlog] = useState<Blog>();
   const [fontSize, setfontSize] = useState<string>("text-base");
   const [isPending, setIsPending] = useState(true);
   const [isBlogValid, setIsBlogValid] = useState(true);
-  const [isEmailVaid, setIsEmailVaid] = useState(false);
 
   useEffect(() => {
     //get blog details
@@ -48,16 +33,6 @@ const ReportDetails = ({ blogId }: probs) => {
       });
   }, []);
 
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-    },
-    validate,
-    onSubmit: (values) => {
-      // console.log(values);
-      setIsEmailVaid(true);
-    },
-  });
   return (
     <>
       {isPending && <div>Loading...</div>}
