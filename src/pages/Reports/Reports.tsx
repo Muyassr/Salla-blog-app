@@ -7,10 +7,19 @@ const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
 const Reports: React.FC = () => {
   const [ideasBlogs, setideasBlogs] = useState<Array<Blog>>([]);
+  const [isPending, setIsPending] = useState(true);
+  const [isEmpty, setIsEmpty] = useState(false);
   useEffect(() => {
     //get blogs
     axios.get(`${baseURL}blogs`).then((response) => {
-      setideasBlogs(response.data);
+      if (response.data.length > 0) {
+        setIsEmpty(false);
+        setIsPending(false);
+        setideasBlogs(response.data);
+      } else {
+        setIsPending(false);
+        setIsEmpty(true);
+      }
     });
   }, []);
   return (
@@ -19,9 +28,14 @@ const Reports: React.FC = () => {
         <h2 className="text-4xl font-medium mb-10 text-center">
           التقارير والدراسات
         </h2>
-        <div className="grid grid-cols-4 gap-4">
-          <BlogList blogs={ideasBlogs} blogType={5} />
-        </div>
+
+        {isPending && <div>Loading...</div>}
+        {isEmpty && <div>list is empty...</div>}
+        {!isEmpty && !isPending && (
+          <div className="grid grid-cols-4 gap-4">
+            <BlogList blogs={ideasBlogs} blogType={5} />
+          </div>
+        )}
       </section>
     </>
   );

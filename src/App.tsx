@@ -24,7 +24,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="*" element={<NotFound />} />
-          <Route  path="/reports/:id" element={<ReportDetails/>} />
+          <Route path="/reports/:id" element={<ReportDetails />} />
         </Routes>
         {/* start Newsletter section */}
         <NewsLetter />

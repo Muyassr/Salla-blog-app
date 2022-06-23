@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-interface probs {}
+interface props {}
 
-const NotFound: React.FC = () => {
+const NotFound: React.FC<props> = () => {
   return (
     <>
       <section id="notFound" className="my-[4.375rem] px-52 ">
