@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { Blog } from "../../models/models";
 import { FiFacebook } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
+import { AiOutlineLinkedin } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
 import { useFormik } from "formik";
 
@@ -56,7 +55,7 @@ const ReportDetails = ({ blogId }: probs) => {
       {isPending && <div>Loading...</div>}
       {!isPending && (
         <section id="report-details" className="">
-          <div className="report-header-bg text-right text-white py-14 px-52 space-y-6">
+          <div className="report-header-bg text-right text-white py-14 px-10 2xl:px-52 space-y-6">
             <h5 className="mb-2 text-sm text--neutral-800 border-r-2 border-emerald-400 pr-2">
               أفكار بزنس
             </h5>
@@ -67,7 +66,7 @@ const ReportDetails = ({ blogId }: probs) => {
             </div>
           </div>
           <div
-            className={`${fontSize} content mx-52 px-12 my-16 py-14 space-y-7 bg-white`}
+            className={`${fontSize} content mx-10 2xl:mx-52 px-12 my-16 py-14 space-y-7 bg-white`}
           >
             <div className="rounded h-[26.75rem] bg-slate-400 report-article-img-1"></div>
             <div className="flex">
@@ -128,15 +127,15 @@ const ReportDetails = ({ blogId }: probs) => {
               واحدة وهي ما تسوق له الأمر الذي سيوفر انتشارا أو نجاحا أكبر مع
               الوقت إذ أنه من.
             </p>
-            <div className="flex justify-between border-t border-neutral-200 py-5  border-b">
+            <div className="flex flex-col space-y-2 sm:flex-row justify-between border-t border-neutral-200 py-5  border-b items-center">
               <div className="tags flex space-x-2 space-x-reverse text-gray-400">
-                <div className="rounded-full bg-slate-100 px-3 py-1 h-fit">
+                <div className="rounded-full bg-slate-100 px-3 py-1 w-fit">
                   # تسويق
                 </div>
-                <div className="rounded-full bg-slate-100 px-3 py-1 h-fit">
+                <div className="rounded-full bg-slate-100 px-3 py-1 w-fit">
                   # تسويق
                 </div>
-                <div className="rounded-full bg-slate-100 px-3 py-1 h-fit">
+                <div className="rounded-full bg-slate-100 px-3 py-1 w-fit">
                   # تسويق
                 </div>
               </div>
@@ -157,13 +156,7 @@ const ReportDetails = ({ blogId }: probs) => {
                   href="#"
                   className="rounded-full  flex justify-center items-center w-9 h-9 text-lg bg-slate-100 border border-stone-200 hover:bg-slate-200 transition-all"
                 >
-                  <AiOutlineInstagram />
-                </a>
-                <a
-                  href="#"
-                  className="rounded-full  flex justify-center items-center w-9 h-9 text-lg bg-slate-100 border border-stone-200 hover:bg-slate-200 transition-all"
-                >
-                  <HiOutlineMail />
+                  <AiOutlineLinkedin />
                 </a>
               </div>
             </div>

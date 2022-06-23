@@ -11,12 +11,14 @@ const Card2 = ({ blogType, blog }: props) => {
   return (
     <>
       <div
-        className={`ideas-blog-card ${isBigImg ? "row-span-3 col-span-8" : ""}`}
+        className={`ideas-blog-card ${
+          isBigImg ? "lg:row-span-3 lg:col-span-8 col-span-4 " : ""
+        }`}
       >
-        <div className="flex relative flex-col">
+        <div className="flex relative lg:flex-col">
           <div
             className={`ideasBlog-image rounded img-ideas-1 w-full ${
-              isBigImg ? "h-[22rem]" : "h-56"
+              isBigImg ? "lg:h-[22rem] lg:w-auto w-48" : "h-56"
             }`}
           ></div>
           <div className="content text-right w-full h-auto pt-5 bg-white p-5">

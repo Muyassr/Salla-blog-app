@@ -56,7 +56,7 @@ const LandingPage: React.FC = () => {
           {/* end Hero Section */}
 
           {/* start Most read section */}
-          <section id="mostRead" className="px-52">
+          <section id="mostRead" className="px-10 2xl:px-52">
             <div className="flex justify-between align-baseline mb-6">
               <h3 className="text-2xl">الأكثر قراءة</h3>
               <a href="#">
@@ -66,40 +66,42 @@ const LandingPage: React.FC = () => {
                 </div>
               </a>
             </div>
-            <div className="conatiner grid grid-cols-3 gap-8">
+            <div className="conatiner grid grid-col-1 md:grid-cols-2 2xl:grid-cols-3 gap-8">
               <BlogList blogs={mostReadBlogs} blogType={1} />
             </div>
           </section>
           {/* end Most read section */}
 
           {/* start ideas blogs grid 1 section */}
-          <section id="ideasBlogs" className="px-52">
-            <div className="grid grid-rows-3 grid-flow-col gap-6">
+          <section id="ideasBlogs" className="px-10 2xl:px-52">
+            <div className="grid grid-col-1 md:grid-col-2 lg:grid-rows-3 lg:grid-flow-col gap-6">
               <BlogList blogs={ideasBlogs} blogType={2} />
             </div>
           </section>
           {/* end ideas blogs grid 1 section */}
 
           {/* sperator */}
-          <div className=" w-[73.125rem] border-t-2 border-neutral-200 mx-auto"></div>
+          <div className="px-10 2xl:px-52 h-1">
+            <div className=" h-10 border-t border-neutral-200"></div>
+          </div>
 
           {/* start Ad banner section */}
-          <section id="adBanner" className="px-52">
+          <section id="adBanner" className="px-10 2xl:px-52">
             <AdBanner />
           </section>
           {/* end Ad banner section */}
 
           {/* start ideas blogs 2 section */}
-          <section id="ideasBlogs2" className="px-52">
-            <div className="conatiner grid grid-cols-4 gap-8">
+          <section id="ideasBlogs2" className="px-10 2xl:px-52">
+            <div className="conatiner grid grid-col-1 md:grid-cols-2 2xl:grid-cols-4 gap-8">
               <BlogList blogs={ideasBlogs} blogType={3} />
             </div>
           </section>
           {/* end ideas blogs 2 section */}
 
           {/* start ideas blogs grid 3 section */}
-          <section id="ideasBlogs3" className="px-52">
-            <div className="grid grid-rows-3 grid-flow-col gap-6">
+          <section id="ideasBlogs3" className="px-10 2xl:px-52">
+            <div className="grid grid-col-1 md:grid-col-2 lg:grid-rows-3 lg:grid-flow-col gap-6">
               <BlogList blogs={ideasBlogs} blogType={4} />
             </div>
           </section>

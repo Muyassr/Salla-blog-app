@@ -30,7 +30,7 @@ const NewsLetter: React.FC<props> = () => {
   });
   return (
     <>
-      <div className="form-wrapper px-52 py-10 flex justify-center bg-[#F7F7F7]">
+      <div className="form-wrapper px-10 lg:px-52 py-10 flex justify-center bg-[#F7F7F7]">
         <form
           className="w-[35rem]"
           action="/"

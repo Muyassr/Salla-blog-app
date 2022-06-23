@@ -8,9 +8,8 @@ const Hero: React.FC<props> = () => {
   const [blog, setBlog] = useState([]);
   return (
     <>
-      
       <section
-        className={`h-[32.5rem] p-5 px-52 flex bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay bg-[url('${imgUrl}')]`}
+        className={`h-[32.5rem] p-5 flex bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay bg-[url('${imgUrl}')] px-10 2xl:px-52`}
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="container flex">

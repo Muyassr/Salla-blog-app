@@ -14,7 +14,7 @@ const Card3 = ({ blogType, blog }: props) => {
           <div
             className={`ideasBlog-image ${blog.img} rounded w-48 h-auto  }`}
           ></div>
-          <div className="content text-right w-80 h-full pr-5">
+          <div className="content text-right lg:w-80 lg:h-full pr-5">
             <h5 className="mb-2 text-sm text--neutral-800 border-r-2 border-emerald-400 pr-2">
               أفكار بزنس
             </h5>

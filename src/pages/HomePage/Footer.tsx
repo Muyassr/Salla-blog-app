@@ -9,9 +9,9 @@ const Footer: React.FC<props> = () => {
   return (
     <>
       <footer>
-        <div className="bg-white  p-5 px-52 align-baseline text-slate-500">
-          <div className="grid grid-cols-3 gap-4">
-            <div className="flex items-center justify-start">
+        <div className="bg-white  p-5 px-10 2xl:px-52 align-baseline text-slate-500">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="flex items-center justify-center lg:justify-start">
               <p>
                 جميع الحقوق محفوظة
                 <span className="text-black"> لشركة مدونة 2022 </span>
@@ -49,7 +49,7 @@ const Footer: React.FC<props> = () => {
                 كن كاتباً معنا
               </button>
             </div>
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-center lg:justify-end">
               <a href="3">
                 <p>الشروط والأحكام</p>
               </a>

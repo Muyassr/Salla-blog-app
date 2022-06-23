@@ -24,7 +24,7 @@ const Reports: React.FC = () => {
   }, []);
   return (
     <>
-      <section id="reposrts" className="my-[4.375rem] px-52">
+      <section id="reposrts" className="my-10 lg:my-[4.375rem] px-10 2xl:px-52">
         <h2 className="text-4xl font-medium mb-10 text-center">
           التقارير والدراسات
         </h2>
@@ -32,7 +32,7 @@ const Reports: React.FC = () => {
         {isPending && <div>Loading...</div>}
         {isEmpty && <div>list is empty...</div>}
         {!isEmpty && !isPending && (
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <BlogList blogs={ideasBlogs} blogType={5} />
           </div>
         )}
