@@ -7,6 +7,7 @@ import { FiTwitter } from "react-icons/fi";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
 import NotFound from "../NotFound";
+import Loading from "../Loading";
 
 interface probs {}
 
@@ -35,7 +36,7 @@ const ReportDetails = ({}: probs) => {
 
   return (
     <>
-      {isPending && <div>Loading...</div>}
+      {isPending && <Loading />}
       {!isBlogValid && <NotFound />}
       {!isPending && isBlogValid && (
         <section id="report-details" className="">

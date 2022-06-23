@@ -20,13 +20,15 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/reports" element={<Reports />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/reports/:id" element={<ReportDetails />} />
-        </Routes>
-        {/* start Newsletter section */}
+        <div className="min-h-[52vh]">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/reports/:id" element={<ReportDetails />} />
+          </Routes>
+          {/* start Newsletter section */}
+        </div>
         <NewsLetter />
         {/* end Newsletter section */}
         <Footer />

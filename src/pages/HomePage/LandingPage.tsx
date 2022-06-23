@@ -8,6 +8,8 @@ import "./styles.scss";
 import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
 import AdBanner from "./AdBanner";
+import Loading from "../Loading";
+import Empty from "../../Empty";
 
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
@@ -40,6 +42,7 @@ const LandingPage: React.FC = () => {
         }
       })
       .catch((response) => {
+        setIsPending(false);
         console.log(response);
       });
   }, []);
@@ -48,8 +51,8 @@ const LandingPage: React.FC = () => {
     // <Navbar/>/
     <>
       <Hero />
-      {isPending && <div>Loading...</div>}
-      {isEmpty && <div>list is empty...</div>}
+      {isPending && <Loading />}
+      {isEmpty && <Empty />}
       {!isEmpty && !isPending && (
         <div className="flex flex-col mt-16 space-y-16 mb-[4.375rem]">
           {/* start Hero Section */}

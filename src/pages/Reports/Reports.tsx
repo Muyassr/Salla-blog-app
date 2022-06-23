@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Empty from "../../Empty";
 import { Blog } from "../../models/models";
 import BlogList from "../HomePage/BlogList";
+import Loading from "../Loading";
 
 const baseURL = "https://62ace799402135c7acba8b3b.mockapi.io/";
 
@@ -34,12 +36,8 @@ const Reports: React.FC = () => {
           التقارير والدراسات
         </h2>
 
-        {isPending && (
-          <div className="">
-            <h1>Loading...</h1>
-          </div>
-        )}
-        {isEmpty && <div>list is empty...</div>}
+        {isPending && <Loading />}
+        {isEmpty && <Empty />}
         {!isEmpty && !isPending && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <BlogList blogs={ideasBlogs} blogType={5} />
