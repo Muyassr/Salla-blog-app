@@ -2,13 +2,13 @@ import { HiOutlineMail } from "react-icons/hi";
 import { useFormik } from "formik";
 import { useState } from "react";
 
-interface props {
-  email: string;
-}
-const validate = (values) => {
-  const errors = {};
+interface props {}
+const validate = (values: any) => {
+  const errors = {
+    email: "",
+  };
   if (!values.email) {
-    errors.email = "Required";
+    // errors.email = "Required";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Invalid email address";
   }
