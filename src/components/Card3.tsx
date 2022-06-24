@@ -22,7 +22,9 @@ const Card3 = ({ blogType, blog }: props) => {
               {blog.title}
             </h5>
             <p className="mb-3 text-base text-neutral-600 dark:text-white">
-              {blog.content}
+              {blog.content.length > 80
+                ? blog.content.substring(0, 80) + "..."
+                : blog.content}
             </p>
             <h3 className="text-sm dark:text-white">بواسطة {blog.author}</h3>
             <a href="#" className="block absolute inset-0"></a>

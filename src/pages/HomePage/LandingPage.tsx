@@ -19,7 +19,7 @@ const LandingPage: React.FC = () => {
   const [isPending, setIsPending] = useState(true);
   const [isEmpty, setIsEmpty] = useState(false);
 
-  const blogTypes = {
+  const listingLayouts = {
     MostReadCard: 1,
     IdeasBlogCard: 2,
     ideasBlogs2: 3,
