@@ -32,7 +32,7 @@ const Reports: React.FC = () => {
   return (
     <>
       <section id="reposrts" className="my-10 lg:my-[4.375rem] px-10 2xl:px-52">
-        <h2 className="text-4xl font-medium mb-10 text-center">
+        <h2 className="text-4xl font-medium mb-10 text-center dark:text-white">
           التقارير والدراسات
         </h2>
 

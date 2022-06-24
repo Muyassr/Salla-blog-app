@@ -17,18 +17,20 @@ const Card2 = ({ blogType, blog }: props) => {
       >
         <div className="flex relative lg:flex-col">
           <div
-            className={`ideasBlog-image rounded img-ideas-1 w-full ${
+            className={`ideasBlog-image rounded ${blog.img} w-full ${
               isBigImg ? "lg:h-[22rem] lg:w-auto w-48" : "h-56"
             }`}
           ></div>
-          <div className="content text-right w-full h-auto pt-5 bg-white p-5">
+          <div className="content text-right w-full h-auto pt-5 bg-white dark:bg-slate-800 dark:text-white p-5">
             <h5 className="mb-2 text-sm text--neutral-800 border-r-2 border-emerald-400 pr-2">
               أفكار بزنس
             </h5>
-            <h5 className="mb-2 text-lg text-black font-medium">
+            <h5 className="mb-2 text-lg text-black dark:text-white font-medium">
               {blog.title}
             </h5>
-            <p className="mb-3 text-base text-neutral-600">{blog.content}</p>
+            <p className="mb-3 text-base text-neutral-600 dark:text-white">
+              {blog.content}
+            </p>
             <h3 className="text-sm">بواسطة {blog.author}</h3>
             <a href="#" className="block absolute inset-0"></a>
           </div>

@@ -51,7 +51,7 @@ const ReportDetails = ({}: probs) => {
             </div>
           </div>
           <div
-            className={`${fontSize} content mx-10 2xl:mx-52 px-12 my-16 py-14 space-y-7 bg-white`}
+            className={`${fontSize} content mx-10 2xl:mx-52 px-12 my-16 py-14 space-y-7 bg-white rounded dark:bg-slate-800 dark:text-white`}
           >
             <div className="rounded h-[26.75rem] bg-slate-400 report-article-img-1"></div>
             <div className="flex">
@@ -193,7 +193,7 @@ const ReportDetails = ({}: probs) => {
                 <div className="flex flex-col col-span-2 space-y-2.5">
                   <label>اكتب تعليقك</label>
                   <textarea
-                    className="border rounded h-28 p-3"
+                    className="border rounded h-28 p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
                     placeholder="اكتب تعليقك هنا"
                     // value={body}
@@ -203,7 +203,7 @@ const ReportDetails = ({}: probs) => {
                 <div className="flex flex-col space-y-2.5">
                   <label>الاسم</label>
                   <input
-                    className="border rounded p-3"
+                    className="border rounded p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="الرجاء كتابة اسمك هنا"
                     type="text"
                     required
@@ -214,7 +214,7 @@ const ReportDetails = ({}: probs) => {
                 <div className="flex flex-col space-y-2.5">
                   <label>الايميل</label>
                   <input
-                    className="border rounded p-3"
+                    className="border rounded p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="الرجاء كتابة ايميلك هنا"
                     type="text"
                     required

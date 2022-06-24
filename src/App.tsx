@@ -13,13 +13,15 @@ import ReportDetails from "./pages/Reports/ReportDetails";
 // import { Route, Router } from "react-router-dom";
 // import { Switch } from "@headlessui/react";
 
-type TParams = { id: string };
-
 function App() {
+  const [isDark, setIsDark] = useState(false);
+  const darkModeToggle = () => {
+    setIsDark(!isDark);
+  };
   return (
     <Router>
-      <div className="App">
-        <Navbar />
+      <div className={`App ${isDark ? "dark" : ""}`}>
+        <Navbar darkModeToggle={darkModeToggle} />
         <div className="min-h-[52vh]">
           <Routes>
             <Route path="/" element={<LandingPage />} />

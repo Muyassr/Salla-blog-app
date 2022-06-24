@@ -5,7 +5,7 @@ interface props {}
 const NotFound: React.FC<props> = () => {
   return (
     <>
-      <section id="notFound" className="my-[4.375rem] px-52 ">
+      <section id="notFound" className="my-[4.375rem] px-10 lg:px-52 ">
         <div className="flex">
           <div className="container m-auto">
             <p className="mb-2">الصفحة غير موجودة حالياً.</p>
