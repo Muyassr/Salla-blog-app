@@ -10,8 +10,6 @@ interface props {
 
 const Navbar: React.FC<props> = ({ darkModeToggle }) => {
   const [isHidden, setIsHidden] = useState(true);
-  console.log(isHidden);
-
   return (
     <>
       <div className="rtl bg-white flex p-5 justify-between align-baseline px-10 2xl:px-52 dark:bg-slate-800">

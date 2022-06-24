@@ -43,7 +43,6 @@ const LandingPage: React.FC = () => {
       })
       .catch((response) => {
         setIsPending(false);
-        console.log(response);
       });
   }, []);
 

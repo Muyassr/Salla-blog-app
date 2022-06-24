@@ -26,7 +26,7 @@ const Reports: React.FC = () => {
         }
       })
       .catch((response) => {
-        console.log(response);
+        // console.log(response);
       });
   }, []);
   return (

@@ -92,7 +92,7 @@ const ReportDetails = ({}: probs) => {
               واحدة وهي ما تسوق له الأمر الذي سيوفر انتشارا أو نجاحا أكبر مع
               الوقت إذ أنه من.
             </p>
-            <h5 className="mb-2 text-black font-bold border-r-2 border-emerald-400 pr-2">
+            <h5 className="mb-2 text-black dark:text-white font-bold border-r-2 border-emerald-400 pr-2">
               ما الذي سستبعه على الانترنت ؟
             </h5>
             <div className="rounded h-[26.75rem] bg-slate-400 report-article-img-1"></div>

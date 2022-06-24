@@ -10,14 +10,31 @@ import Navbar from "./components/Navbar";
 import NewsLetter from "./pages/HomePage/NewsLetter";
 import Footer from "./pages/HomePage/Footer";
 import ReportDetails from "./pages/Reports/ReportDetails";
-// import { Route, Router } from "react-router-dom";
-// import { Switch } from "@headlessui/react";
+
+const getMode = (mode: string) => {
+  return mode == "false" ? false : true;
+};
+
+const getIsDark = (mode: boolean) => {
+  return !mode;
+};
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(
+    getMode(localStorage.getItem("isDark") || "") || false
+  );
   const darkModeToggle = () => {
-    setIsDark(!isDark);
+    const currentMode = localStorage.getItem("isDark");
+    localStorage.setItem("isDark", `${!getMode(currentMode || "")}`);
+    setIsDark(!getMode(currentMode || ""));
   };
+  console.log(
+    "qqqq current local:",
+    localStorage.getItem("isDark"),
+    "curr isDark:",
+    isDark
+  );
+
   return (
     <Router>
       <div className={`App ${isDark ? "dark" : ""}`}>
