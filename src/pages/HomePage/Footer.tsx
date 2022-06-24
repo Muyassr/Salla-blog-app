@@ -15,6 +15,7 @@ const Footer: React.FC<props> = () => {
               <p className="dark:text-white">
                 جميع الحقوق محفوظة
                 <span className="text-black dark:text-slate-500">
+                  {" "}
                   لشركة مدونة 2022{" "}
                 </span>
               </p>

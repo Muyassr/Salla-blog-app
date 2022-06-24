@@ -3,8 +3,8 @@ interface props {}
 const Loading: React.FC<props> = () => {
   return (
     <>
-      <div className="bg-red-0 absolute bg-blend-screen flex inset-0">
-        <div className="border m-auto flex flex-col text-center p-5 bg-white rounded drop-shadow-xl">
+      <div className="absolute bg-blend-screen flex inset-0">
+        <div className="border m-auto flex flex-col text-center p-5 bg-white rounded drop-shadow-xl dark:bg-slate-400 dark:border-slate-800">
           <div className="flex justify-center">
             <svg
               role="status"

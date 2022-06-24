@@ -124,7 +124,7 @@ const ReportDetails = ({}: probs) => {
                   # تسويق
                 </div>
               </div>
-              <div className="flex space-x-2 space-x-reverse">
+              <div className="flex space-x-2 space-x-reverse dark:text-black">
                 <a
                   href="#"
                   className="rounded-full  flex justify-center items-center w-9 h-9 text-lg bg-slate-100 border border-stone-200 hover:bg-slate-200 transition-all"
@@ -147,18 +147,18 @@ const ReportDetails = ({}: probs) => {
             </div>
             {/* comments section */}
             <section className="space-y-5">
-              <h5 className="mb-2 text-black font-bold border-r-2 border-emerald-400 pr-2">
+              <h5 className="mb-2 text-black dark:text-white font-bold border-r-2 border-emerald-400 pr-2">
                 التعليقات (3)
               </h5>
               <div className="comment border-b pb-5">
                 <div className="flex justify-between mb-2">
-                  <h5 className="text-black">أبو جود</h5>
+                  <h5 className="text-black dark:text-white ">أبو جود</h5>
                   <div className="flex space-x-1 items-center space-x-reverse">
                     <BiTimeFive />
                     <h5>منذ يوم</h5>
                   </div>
                 </div>
-                <p className="text-neutral-700">
+                <p className="text-neutral-700 dark:text-white">
                   إن من أهم مميزات التسويق الإلكتروني تعدد طرقه وأدواته وهو ما
                   روني تعدد طرقه وأدواته وهو ما يجعله يناسب أنواع الأعمال
                   والأعمار المختلفة، إذ يفضل تطبيق جميع الطرق لأنها في النهاية
@@ -168,13 +168,13 @@ const ReportDetails = ({}: probs) => {
               </div>
               <div className="comment border-b pb-5">
                 <div className="flex justify-between mb-2">
-                  <h5 className="text-black">أبو جود</h5>
+                  <h5 className="text-black dark:text-white">أبو جود</h5>
                   <div className="flex space-x-1 items-center space-x-reverse">
                     <BiTimeFive />
                     <h5>منذ يوم</h5>
                   </div>
                 </div>
-                <p className="text-neutral-700">
+                <p className="text-neutral-700 dark:text-white">
                   إن من أهم مميزات التسويق الإلكتروني تعدد طرقه وأدواته وهو ما
                   روني تعدد طرقه وأدواته وهو ما يجعله يناسب أنواع الأعمال
                   والأعمار المختلفة، إذ يفضل تطبيق جميع الطرق لأنها في النهاية
@@ -182,7 +182,7 @@ const ReportDetails = ({}: probs) => {
                   نجاحا أكبر مع الوقت إذ أنه من.
                 </p>
               </div>
-              <h5 className="mb-2 text-black font-bold border-r-2 border-emerald-400 pr-2">
+              <h5 className="mb-2 text-black dark:text-white font-bold border-r-2 border-emerald-400 pr-2">
                 كن اول من يعلق
               </h5>
               <form

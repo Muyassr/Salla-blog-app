@@ -60,7 +60,7 @@ const LandingPage: React.FC = () => {
 
           {/* start Most read section */}
           <section id="mostRead" className="px-10 2xl:px-52">
-            <div className="flex justify-between align-baseline mb-6">
+            <div className="flex justify-between align-baseline mb-6 dark:text-white">
               <h3 className="text-2xl">الأكثر قراءة</h3>
               <a href="#">
                 <div className="flex items-center">

@@ -61,7 +61,7 @@ const Navbar: React.FC<props> = ({ darkModeToggle }) => {
           >
             <GiHamburgerMenu />
             <div
-              className={`flex flex-col space-y-8 space-x-reverse bg-white p-3 rounded w-40 absolute z-10 left-0 -bottom-[11rem] border shadow ${
+              className={`flex flex-col items-baseline space-y-3 space-x-reverse bg-white p-3 rounded w-40 absolute z-10 left-0 -bottom-[15.5rem] border shadow ${
                 isHidden ? "hidden" : ""
               }`}
             >
@@ -84,6 +84,15 @@ const Navbar: React.FC<props> = ({ darkModeToggle }) => {
               >
                 المقالات
               </Link>
+              <button className="rounded-full p-3 text-lg bg-slate-100 border border-stone-200 hover:bg-slate-200 transition-all">
+                <BiSearchAlt2 />
+              </button>
+              <button
+                onClick={darkModeToggle}
+                className="rounded-full p-3 text-lg bg-slate-100 border border-stone-200 hover:bg-slate-200 transition-all"
+              >
+                <MdOutlineDarkMode />
+              </button>
             </div>
           </button>
         </div>
