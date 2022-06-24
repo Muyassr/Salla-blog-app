@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Blog } from "../../models/models";
 import { FiFacebook } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
+import { BsPersonCircle } from "react-icons/bs";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
 import NotFound from "../NotFound";
@@ -45,8 +46,12 @@ const ReportDetails = ({}: probs) => {
               أفكار بزنس
             </h5>
             <h5 className="mb-2 text-5xl font-bold">{blog?.title}</h5>
-            <div className="author flex space-x-5 space-x-reverse">
+            <div className="author flex space-x-3 space-x-reverse">
+              <div className="text-xl">
+                <BsPersonCircle />
+              </div>
               <h3 className="text-sm">بواسطة {blog?.author}</h3>
+              <div className="border-r-2 border-gray-100 h-4 "></div>
               <h3 className="text-sm">{blog?.published}</h3>
             </div>
           </div>

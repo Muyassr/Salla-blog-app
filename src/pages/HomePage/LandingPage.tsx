@@ -34,7 +34,7 @@ const LandingPage: React.FC = () => {
         if (response.data.length > 0) {
           setIsEmpty(false);
           setIsPending(false);
-          setMostReadBlogs(response.data.slice(0, 3));
+          setMostReadBlogs(response.data.filter((x: Blog) => x.blogType == 1));
           setideasBlogs(response.data.slice(0, 4));
         } else {
           setIsPending(false);
@@ -45,6 +45,7 @@ const LandingPage: React.FC = () => {
         setIsPending(false);
       });
   }, []);
+  console.log(mostReadBlogs);
 
   return (
     // <Navbar/>/

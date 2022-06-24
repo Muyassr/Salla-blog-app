@@ -23,19 +23,19 @@ const Navbar: React.FC<props> = ({ darkModeToggle }) => {
           <div className="lg:flex space-x-8 space-x-reverse hidden">
             <Link
               to="/"
-              className="dark:text-white hover:text-emerald-500  hover:underline underline-offset-8 transition-all"
+              className="dark:text-white hover:text-emerald-500 dark:hover:text-emerald-500  hover:underline underline-offset-8 transition-all"
             >
               الرئيسية
             </Link>
             <Link
               to="/reports"
-              className="dark:text-white hover:text-emerald-500  hover:underline underline-offset-8 transition-all"
+              className="dark:text-white hover:text-emerald-500  dark:hover:text-emerald-500 hover:underline underline-offset-8 transition-all"
             >
               التقارير والدراسات
             </Link>
             <Link
               to="/x"
-              className="dark:text-white hover:text-emerald-500  hover:underline underline-offset-8 transition-all"
+              className="dark:text-white hover:text-emerald-500 dark:hover:text-emerald-500  hover:underline underline-offset-8 transition-all"
             >
               المقالات
             </Link>

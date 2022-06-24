@@ -5,6 +5,7 @@ export interface Blog {
     content: string;
     author: string;
     img: string;
+    blogType: number;
     published: string;
   }
   
