@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 interface props {
-  darkModeToggle: (e: Event) => void;
+  darkModeToggle: (e: Event) => string;
 }
 
 const Navbar: React.FC<props> = ({ darkModeToggle }) => {
